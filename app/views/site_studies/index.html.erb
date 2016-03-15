@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+  <p id="notice"><%= notice %></p>
+
+<h1>Listing Site Studies</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Site</th>
+      <th>Name of Investigator</th>
+      <th>Study Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @site_studies.each do |site_study| %>
+      <tr>
+        <td><%= site_study.Site.name %></td>
+        <td><%= site_study.Study.name %></td>
+        <td><%= site_study.Study.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div></div>

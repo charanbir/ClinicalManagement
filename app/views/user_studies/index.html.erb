@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User Studies</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Study title</th>
+      <th>Investigator</th>
+      <th>Gender</th>
+      <th>DOB</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_studies.each do |user_study| %>
+      <tr>
+        <td><%= user_study.User.name %></td>
+        <td><%= user_study.Study.title %></td>
+        <td><%= user_study.Study.name %></td>
+        <td><%= user_study.gender %></td>
+        <td><%= user_study.dob %></td>
+        <td><%= user_study.address %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h4><u><%= link_to 'Export to CSV', "user_studies.csv" %></h4></u>

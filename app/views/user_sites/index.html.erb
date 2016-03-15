@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User Sites</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Site</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_sites.each do |user_site| %>
+      <tr>
+        <td><%= user_site.User.name %></td>
+        <td><%= user_site.Site.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

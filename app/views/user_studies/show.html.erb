@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_study.User.name %>
+</p>
+
+<p>
+  <strong>Study:</strong>
+  <%= @user_study.Study.title %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @user_study.dob %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @user_study.gender %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user_study.address %>
+</p>
+
+<%= link_to 'Edit', edit_user_study_path(@user_study) %> |
+<%= link_to 'Back', studies_path %>

@@ -1,0 +1,11 @@
+<%# add navigation links to this file %>
+  <li><%= link_to 'Studies', studies_path %></li>
+  <% if user_signed_in? %>
+  <% if current_user.name=='admin' %>
+  <li><%= link_to 'Sites', sites_path %></li>
+  <li><%= link_to 'Users', users_path %></li>
+  <li><%= link_to 'Users enrolled in Sites', user_sites_path %></li>
+  <li><%= link_to 'Sites enrolled in Studies', site_studies_path %></li>
+  <li><%= link_to 'Users enrolled in Studies', user_studies_path %></li>
+  <% end %>  
+  <% end %>
